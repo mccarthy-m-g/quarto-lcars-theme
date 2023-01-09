@@ -1,0 +1,9 @@
+title: LCARS Theme
+author: Michael McCarthy
+version: 1.0.0
+quarto-required: ">=1.2.0"
+contributes:
+  formats:
+    html:
+      theme: custom.scss
+      highlight-style: highlight.theme

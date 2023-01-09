@@ -1,0 +1,835 @@
+---
+title: Quarto LCARS Theme
+format:
+  lcars-html: default
+author: Michael McCarthy
+date: last-modified
+toc: true
+---
+
+# Navbars
+
+```{=html}
+<header id="quarto-header" class="">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="padding-left: 1em; padding-right: 1em;">
+      <div class="navbar-brand-container">
+        <a class="navbar-brand" href="#">Navbar</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav navbar-nav-scroll me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false rel="" target="""><span class="menu-text">Dropdown</span></a>
+            <ul class="dropdown-menu" aria-labelledby="nav-menu-dropdown">
+              <li>
+                <a class="dropdown-item" href="#" rel="" target="">
+                  <span class="dropdown-text">Action</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" rel="" target="">
+                  <span class="dropdown-text">Another action</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" rel="" target="">
+                  <span class="dropdown-text">Something else here</span>
+                </a>
+              </li>
+              <li class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="#" rel="" target="">
+                  <span class="dropdown-text">Separated link</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+  </nav>
+</header>
+```
+
+# Buttons
+
+```{=html}
+<p>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-secondary">Secondary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-light">Light</button>
+  <button type="button" class="btn btn-dark">Dark</button>
+  
+  <button type="button" class="btn btn-link">Link</button>
+</p>
+<p>
+  <button type="button" class="btn btn-outline-primary">Primary</button>
+  <button type="button" class="btn btn-outline-secondary">Secondary</button>
+  <button type="button" class="btn btn-outline-success">Success</button>
+  <button type="button" class="btn btn-outline-danger">Danger</button>
+  <button type="button" class="btn btn-outline-warning">Warning</button>
+  <button type="button" class="btn btn-outline-info">Info</button>
+  <button type="button" class="btn btn-outline-light">Light</button>
+  <button type="button" class="btn btn-outline-dark">Dark</button>
+</p>
+```
+
+# Typography
+
+# Heading 1 {.unnumbered .unlisted}
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+## Body Text
+
+Normal text
+
+**Bold text**
+
+*italics*
+
+~~strikethrough~~
+
+[links](https://www.xaringan.gallery/).
+
+Footnotes[^1]
+
+[^1]: Footnote
+
+`inline code`
+
+## Block quotes
+
+> Dorothy followed her through many of the beautiful rooms in her
+> castle.
+
+
+## Lists
+
+### Ordered Lists
+
+1.  First item
+2.  Second item
+3.  Third item
+    1.  Indented item
+    2.  Indented item
+4.  Fourth item
+
+### Unordered Lists
+
+-   First item
+-   Second item
+-   Third item
+-   Fourth item
+
+# Code Output
+
+## collapse: false
+
+```{r}
+#| collapse: false
+print("message")
+```
+
+```{r}
+#| error: true
+# "Error"
+stop("error")
+```
+
+```{r}
+#| warning: true
+# "Warning"
+warning("message")
+```
+
+## collapse: true
+
+```{r}
+#| collapse: true
+print("message")
+```
+
+```{r}
+#| error: true
+#| collapse: true
+# "Error"
+stop("error")
+```
+
+```{r}
+#| warning: true
+#| collapse: true
+# "Warning"
+warning("message")
+```
+
+# Code Blocks
+
+## "Function"
+
+```{r}
+#| eval: false
+library(package)
+
+package::my_function()
+package:::my_secret_function()
+package::my_function
+package:::my_secret_function
+```
+
+## "Attribute"
+
+```{r}
+#| eval: false
+my_function(x, argument = "value")
+```
+
+## "Normal"
+
+```{r}
+#| eval: false
+x
+x2
+x_2
+```
+
+## "String"
+
+```{r}
+#| eval: false
+'string'
+"string"
+"newline\n and escaped slash \\"
+```
+
+## "Constant"
+
+```{r}
+#| eval: false
+123456789
+```
+
+## "DecVal"
+
+```{r}
+#| eval: false
+1.23456789
+```
+
+## "Operator"
+
+```{r}
+#| eval: false
+TRUE
+FALSE
+NA
+NA_character_
+NA_complex_
+NA_integer_
+NA_real_
+NaN
+Inf
+-Inf
+NULL
+```
+
+## "ControlFlow"
+
+```{r}
+#| eval: false
+function(x) return(x)
+for (x in 1:10) print(x)
+while (x < 1) print(x)
+```
+
+## "Other"
+
+```{r}
+#| eval: false
+x <- 1
+```
+
+## "SpecialChar"
+
+```{r}
+#| eval: false
+package::my_function
+TRUE | T
+FALSE || F
+y ~ x + (1 | z:w)
+1L + 1L %% 2 == 0
+1.0 * 1.0 / 1.0
++10 ^ 2 ** 2
+-2 - 4i
+x %>% print()
+x |> print()
+x$y
+```
+
+## Unused by R/Quarto HTML
+
+```{r}
+# Seemingly unused by R:
+# - "SpecialString"
+# - "Annotation"
+# - "Float"
+# - "Keyword"
+```
+
+# Tables
+
+```{=html}
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Class</th>
+        <th scope="col">Heading</th>
+        <th scope="col">Heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Default</th>
+        <td>Cell</td>
+        <td>Cell</td>
+      </tr>
+
+        <tr class="table-primary">
+          <th scope="row">Primary</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row">Secondary</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row">Success</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row">Danger</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-warning">
+          <th scope="row">Warning</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-info">
+          <th scope="row">Info</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-light">
+          <th scope="row">Light</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr class="table-dark">
+          <th scope="row">Dark</th>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+```
+
+# Callout Blocks
+
+## Default Appearance
+
+::: {.callout-note}
+Note that there are five types of callouts, including: `note`, `tip`, `warning`, `caution`, and `important`.
+:::
+
+::: {.callout-warning}
+Callouts provide a simple way to attract attention, for example, to this warning.
+:::
+
+::: {.callout-important}
+Danger, callouts will really improve your writing.
+:::
+
+::: {.callout-tip}
+This is an example of a callout with a caption.
+:::
+
+::: {.callout-caution collapse="false"}
+## Expand To Learn About Collapse
+
+This is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+## Simple Appearance
+
+::: {.callout-note appearance="simple"}
+## Pay Attention
+
+Using callouts is an effective way to highlight content that your reader give special consideration or attention.
+:::
+
+::: {.callout-warning appearance="simple"}
+Callouts provide a simple way to attract attention, for example, to this warning.
+:::
+
+::: {.callout-important appearance="simple"}
+Danger, callouts will really improve your writing.
+:::
+
+::: {.callout-tip appearance="simple"}
+This is an example of a callout with a caption.
+:::
+
+::: {.callout-caution appearance="simple" collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a ‘collapsed’ caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+# Forms
+
+```{=html}
+<div class="mb-4">
+  <form>
+    <fieldset>
+      <legend>Legend</legend>
+      <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleSelect1">Example select</label>
+        <select class="form-select" id="exampleSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleSelect2">Example multiple select</label>
+        <select multiple="" class="form-select" id="exampleSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleTextarea">Example textarea</label>
+        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="formFile" class="form-label">Default file input example</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <fieldset class="form-group">
+        <legend class="mt-4">Radio buttons</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+          <label class="form-check-label" for="optionsRadios1">
+            Option one is this and that—be sure to include why it's great
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          <label class="form-check-label" for="optionsRadios2">
+            Option two can be something else and selecting it will deselect option one
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+          <label class="form-check-label" for="optionsRadios3">
+            Option three is disabled
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <legend>Checkboxes</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+          <label class="form-check-label" for="flexCheckChecked">
+            Checked checkbox
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <legend class="mt-4">Switches</legend>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked="">
+          <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+        </div>
+      </fieldset>
+      <fieldset class="form-group">
+        <legend>Ranges</legend>
+          <label for="customRange1" class="form-label">Example range</label>
+          <input type="range" class="form-range" id="customRange1">
+          <label for="disabledRange" class="form-label">Disabled range</label>
+          <input type="range" class="form-range" id="disabledRange" disabled="">
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+</div>
+```
+
+```{=html}
+<div>
+  <div class="form-group">
+    <fieldset disabled="">
+      <label class="form-label" for="disabledInput">Disabled input</label>
+      <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled="">
+    </fieldset>
+  </div>
+  <div class="form-group">
+    <fieldset>
+      <label class="form-label" for="readOnlyInput">Readonly input</label>
+      <input class="form-control" id="readOnlyInput" type="text" placeholder="Readonly input here..." readonly="">
+    </fieldset>
+  </div>
+  <div class="form-group has-success">
+    <label class="form-label" for="inputValid">Valid input</label>
+    <input type="text" value="correct value" class="form-control is-valid" id="inputValid">
+    <div class="valid-feedback">Success! You've done it.</div>
+  </div>
+  <div class="form-group has-danger">
+    <label class="form-label" for="inputInvalid">Invalid input</label>
+    <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
+    <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
+  </div>
+  <div class="form-group">
+    <label class="col-form-label col-form-label-lg" for="inputLarge">Large input</label>
+    <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="inputLarge">
+  </div>
+  <div class="form-group">
+    <label class="col-form-label" for="inputDefault">Default input</label>
+    <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+  </div>
+  <div class="form-group">
+    <label class="col-form-label col-form-label-sm" for="inputSmall">Small input</label>
+    <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" id="inputSmall">
+  </div>
+  <div class="form-group">
+    <label class="form-label mt-4">Input addons</label>
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">.00</span>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn btn-primary" type="button" id="button-addon2">Button</button>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-label mt-4">Floating labels</label>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
+  </div>
+</div>
+```
+
+# Navs
+
+## Tabs
+
+```{=html}
+<div>
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab">Home</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" tabindex="-1" role="tab">Profile</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link disabled" href="#" aria-selected="false" tabindex="-1" role="tab">Disabled</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade show active" id="home" role="tabpanel">
+      <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel">
+      <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+    </div>
+    <div class="tab-pane fade" id="dropdown1">
+      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+    </div>
+    <div class="tab-pane fade" id="dropdown2">
+      <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+    </div>
+  </div>
+</div>
+```
+
+## Pills
+
+```{=html}
+<div>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</div>
+```
+
+## Breadcrumbs
+
+```{=html}
+<div>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">Home</li>
+  </ol>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active">Library</li>
+  </ol>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active">Data</li>
+  </ol>
+</div>
+```
+
+## Pagination
+
+```{=html}
+<div>
+  <div>
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="#">&laquo;</a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">4</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">5</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">&raquo;</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="pagination pagination-lg">
+      <li class="page-item disabled">
+        <a class="page-link" href="#">&laquo;</a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">4</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">5</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">&raquo;</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <ul class="pagination pagination-sm">
+      <li class="page-item disabled">
+        <a class="page-link" href="#">&laquo;</a>
+      </li>
+      <li class="page-item active">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">4</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">5</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">&raquo;</a>
+      </li>
+    </ul>
+  </div>
+</div>
+```
+
+# Progress
+
+```{=html}
+<div>
+  <div class="progress mb-2">
+    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress mb-2">
+    <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress mb-2">
+    <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress mb-2">
+    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <div class="progress mb-2">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>
+```
+
+# Cards
+
+```{=html}
+<div>
+  <div class="card" style="max-width: 20rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h4 class="card-title">Secondary card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+</div>
+```
+
+<!--
+# Dialogs
+
+## Popovers
+
+```{=html}
+<div>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+    Popover on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+    Popover on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+    Popover on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+    Popover on left
+  </button>
+</div>
+```
+-->
