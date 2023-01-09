@@ -1,0 +1,59 @@
+/* css styles */
+
+/* Fonts */
+@font-face {
+  font-family: "lcars-2";
+  src: local("Helvetica Ultra Compressed"),
+    url("Helvetica Ultra Compressed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "lcars";
+  src: local("Helvetica Condensed Regular"),
+    url("Helvetica Condensed Regular.ttf") format("truetype");
+}
+
+/* Headings */
+h2, .h2 {
+  border-bottom: 4px solid;
+  border-color: inherit;
+}
+
+/* Rules */
+hr:not([size]) {
+  height: 4px;
+}
+
+.vr {
+  width: 4px;
+}
+
+.dr {
+  margin: 1rem auto;
+  width: 20px;
+  border-radius: 10px;
+}
+
+hr:not([size]).dr {
+  height: 20px;
+}
+
+/* Bullet Points */
+:not(nav) > ul:not(.navbar-nav, .nav, .pagination) {
+  list-style: none;
+}
+
+:not(nav) > ul:not(.navbar-nav, .nav, .pagination) li {
+  position: relative;
+}
+
+:not(nav) > ul:not(.navbar-nav, .nav, .pagination) li:before {
+  content: "";
+  display: block;
+  width: 0.45em;
+  height: 0.30em;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.25em;
+  top: 0.6em;
+}

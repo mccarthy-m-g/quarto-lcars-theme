@@ -183,7 +183,7 @@
             "underline": false
         },
         "Constant": {
-            "text-color": "#8f5902",
+            "text-color": "#CC99CC",
             "background-color": null,
             "bold": false,
             "italic": false,

@@ -1,5 +1,7 @@
 ---
 title: Quarto LCARS Theme
+abstract: |
+  This is a template for testing the Quarto LCARS theme
 format:
   lcars-html: default
 author: Michael McCarthy
@@ -133,6 +135,19 @@ Footnotes[^1]
 > Dorothy followed her through many of the beautiful rooms in her
 > castle.
 
+## Rules
+
+### Horizontal Rule
+
+<hr>
+
+### Vertical Rule `class="vr"`
+
+<hr class="vr" style="height: 60px;">
+
+### Disc Rule `class="dr"`
+
+<hr class="dr">
 
 ## Lists
 
@@ -240,7 +255,7 @@ x_2
 123456789
 ```
 
-## "DecVal"
+## "DecVal", "Float"
 
 ```{r}
 #| eval: false
@@ -303,8 +318,9 @@ x$y
 # Seemingly unused by R:
 # - "SpecialString"
 # - "Annotation"
-# - "Float"
 # - "Keyword"
+# - "DataType"
+# - "BaseN"
 ```
 
 # Tables
