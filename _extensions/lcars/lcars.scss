@@ -292,6 +292,12 @@ ul li:before {
 }
 
 // Headings
+h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  & code {
+    text-transform: none;
+  }
+}
+
 #title-block-header.quarto-title-block.default .quarto-title-meta-heading,
 #title-block-header.quarto-title-block.default .description .abstract-title, #title-block-header.quarto-title-block.default .abstract .abstract-title {
   color: $pink
