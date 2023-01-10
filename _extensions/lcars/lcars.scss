@@ -38,14 +38,6 @@ $dark-blue: #3366cc
 // https://github.com/quarto-dev/quarto-cli/blob/d16d9f13110e084ef3c5a4b0f9561a5eb5f3158f/src/resources/formats/html/bootstrap/themes/
 
 // Color system
-$dark-shade: #191F3D;
-$dark-shade-alpha: #191F3D85;
-$dark-accent: #BA70A0;
-$main-colour: #123C69;
-$light-accent: #24639E;
-$light-accent-hl: rgb(81, 129, 177);
-$light-shade: #fffbfa;
-
 $white:    #F5F6FA !default;
 $gray-100: #F4F4F4 !default;
 $gray-200: #E9E9E9 !default;
@@ -302,5 +294,5 @@ ul li:before {
 // Headings
 #title-block-header.quarto-title-block.default .quarto-title-meta-heading,
 #title-block-header.quarto-title-block.default .description .abstract-title, #title-block-header.quarto-title-block.default .abstract .abstract-title {
-  color: $purple
+  color: $pink
 }

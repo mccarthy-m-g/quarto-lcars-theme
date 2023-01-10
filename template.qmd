@@ -1,9 +1,9 @@
 ---
 title: Quarto LCARS Theme
+description: Library Computer Access/Retrieval System
 abstract: |
   This is a template for testing the Quarto LCARS theme
-format:
-  lcars-html: default
+format: lcars-html
 author: Michael McCarthy
 date: last-modified
 toc: true

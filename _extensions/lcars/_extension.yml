@@ -9,5 +9,8 @@ contributes:
       css:   lcars.css
       highlight-style: highlight.theme
       author-title: Crew
-      abstract-title: Mission Log
       published-title: Stardate
+      date-format: "YYYY.MM.D"
+      abstract-title: Mission Log
+      title-block-banner: "#2C2C2C"
+      title-block-banner-color: "#CC99CC"
