@@ -14,12 +14,14 @@
 }
 
 /* Titles */
-.quarto-title-banner, .quarto-title, .title {
+.quarto-title-banner .quarto-title .title {
+  font-weight: 400;
   text-transform: uppercase;
 }
 
 /* Headings */
 h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-weight: 400;
   text-transform: uppercase;
 }
 
