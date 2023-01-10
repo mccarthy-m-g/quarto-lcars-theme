@@ -30,6 +30,10 @@ h2, .h2 {
   border-color: inherit;
 }
 
+#quarto-appendix.default .quarto-appendix-heading {
+  font-size: 1.15em !important;
+}
+
 /* Rules */
 hr:not([size]) {
   height: 4px;
