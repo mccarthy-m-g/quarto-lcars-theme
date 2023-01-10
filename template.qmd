@@ -169,7 +169,7 @@ Footnotes[^1]
 
 # Code Output
 
-## collapse: false
+## `collapse: false`
 
 ```{r}
 #| collapse: false
@@ -188,7 +188,7 @@ stop("error")
 warning("message")
 ```
 
-## collapse: true
+## `collapse: true`
 
 ```{r}
 #| collapse: true
